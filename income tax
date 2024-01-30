@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class tax {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.print("enter the income: ");
+	   int n=scanner.nextInt();
+	   int taxableincome=(n-250000);
+		   if(n<=250000){
+		   System.out.println("no tax for income");
+	   }
+	   else if(taxableincome>250001  && taxableincome<=500000){
+		   
+		    System.out.println(" taxable income:"+taxableincome);
+			double tax=(taxableincome)*0.1;
+			 System.out.println("the tax is:"+tax);
+	   }
+	   else if(taxableincome>500001  && taxableincome<=1000000){
+		   
+		    System.out.println(" taxable income:"+taxableincome);
+			double tax=(taxableincome)*0.2;
+			 System.out.println("the tax is:"+tax);
+	   }
+	   else {
+		   
+		    System.out.println(" taxable income:"+taxableincome);
+			double tax=(taxableincome)*0.3;
+			 System.out.println("the tax is:"+tax);
+	   }
+   }
+}
