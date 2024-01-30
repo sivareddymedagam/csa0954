@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Scanner;
+class maximum{
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter the size of array:");
+		int size=scanner.nextInt();
+		System.out.print("enter the elements:");
+		int[] array=new int[size];
+		for(int i=0;i<size;i++){
+			array[i]=scanner.nextInt();
+		}
+			System.out.println("enter the mth maximum number:");
+			int m=scanner.nextInt();
+			System.out.println("enter the nth minimum number:");
+			int n=scanner.nextInt();
+			Arrays.sort(array);
+			int mth=array[size-m];
+			int nth=array[n-1];
+			int sum=mth+nth;
+			int difference=mth-nth;
+			System.out.println("the mth  maximum is:"+mth);
+			System.out.println("the nth minimum is:"+nth);
+			System.out.println("the sum is:"+sum);
+			System.out.println("the differenceis:"+difference);
+			
+		}
+	}
