@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class NumberSquareNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter a lower range:");
+		int lower=scanner.nextInt();
+		System.out.print("enter a upper range:");
+		int upper=scanner.nextInt();
+		for(int i=lower;i<=upper;i++)
+			{
+			System.out.println("("+i+","+(i*i)+")"+" ");
+			}
+	}
+}
