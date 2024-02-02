@@ -1,0 +1,25 @@
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+public class MultiplicationTableThreads {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(2); 
+        Runnable task1 = () -> {
+            System.out.println("Thread 1 (5's table): New -> Runnable");
+            displayTable(5, 1, 5);
+            System.out.println("Thread 1: Runnable -> Terminated");
+        };
+        Runnable task2 = () -> {
+            System.out.println("Thread 2 (10's table): New -> Runnable");
+            displayTable(10, 6, 10);
+            System.out.println("Thread 2: Runnable -> Terminated");
+        };
+        executor.submit(task1);
+        executor.submit(task2);
+        executor.shutdown();
+    }
+    private static void displayTable(int num, int start, int end) {
+        for (int i = start; i <= end; i++) {
+            System.out.println(num + " * " + i + " = " + (num * i));
+        }
+    }
+}
