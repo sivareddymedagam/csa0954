@@ -1,0 +1,19 @@
+class fibonacci
+{
+	public static void main(String[] args)
+	{
+		System.out.print("enter the number to be print:");
+		int n=Integer.parseInt(System.console().readLine());
+		System.out.println("fibonacci series are:");
+		int t1=0,t2=1;
+		System.out.print(t1+ " " +t2);
+		for(int i=3;i<=n;++i)
+		{
+		    int nextTerm=t1+t2;
+			System.out.print(" " +nextTerm);
+			t1=t2;
+			t2=nextTerm;
+		}
+		System.out.println();
+	}
+}
