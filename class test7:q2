@@ -1,0 +1,21 @@
+class sub
+{
+	public static void main(String args[])
+    {
+        int x=100;
+        int y=200;
+        subsuper obj=new subsuper(x, y);
+    }
+    sub(int x, int y)
+    {
+        System.out.println(x + "," +y);
+    }
+}
+class subsuper extends sub
+{
+    subsuper(int x, int y)
+    {
+        super(x,y);
+    }
+    
+}
